@@ -1,5 +1,5 @@
-
 import "./App.css";
+import AppRoutes from "./routes";
 import News from "./routes/news/News";
 
 function App() {
@@ -7,8 +7,7 @@ function App() {
 
   return (
     <>
-    hallo
-      <News />
+    <AppRoutes/>
     </>
   );
 }

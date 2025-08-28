@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { domainFromUrl, formatData } from "../assets/utils";
+
 const NewsCardItem = ({ newsItem, id }) => {
   const {
     urlToImage,
@@ -13,24 +15,38 @@ const NewsCardItem = ({ newsItem, id }) => {
 
   const sourceName = source?.name || domainFromUrl(url) || "Source";
   const published = formatData(publishedAt);
+  const text = shortenText(description, 15);
+
+  function shortenText(str, wordLimit) {
+    const words = str.split(" ");
+    return words.length <= wordLimit
+      ? str
+      : words.slice(0, wordLimit).join(" ") + "...";
+  }
 
   return (
-    <div>
-      <article className="">
-        <div>
-          <img src={urlToImage} alt="" />
-        </div>
-        <div>
-          <div>
-            <h2>{title}</h2>
-            <p>{description}</p>
-          </div>
+    <div className="shadow-sm h-[210px] w-[744px] rounded-[12px] p-[10px] gap-[10px]">
+      <article className="flex gap-3 ">
+        <img
+          src={urlToImage}
+          alt=""
+          className="w-[340px] h-[190px] rounded-2xl"
+        />
+        <div className="flex flex-col justify-between">
+          <Link to={`/${id}`} state={{ newsItem }}>
+            <h2 className="font-bold mt-2 mb-2 ">{title}</h2>
+            <p>{text}</p>
+          </Link>
 
-          <div>
-            <div>
-              <img src="../../public/img/unsplash_L2dTmhQzx4Q.png" alt="" />
-              <div>
-                <h3>{author}</h3>
+          <div className="bg-gray-100 flex flex-col w-[374px] h-[72px] rounded-[12px]">
+            <div className="flex justify-between items-center px-4 py-2">
+              <img
+                src="../../public/img/unsplash_L2dTmhQzx4Q.png"
+                alt=""
+                className="w-[44px] h-[44px] rounded-[12px]"
+              />
+              <div className="flex flex-col ml-2 mr-auto">
+                <h3 className="font-bold">{author}</h3>
                 <p>{published}</p>
               </div>
               <img src="../../public/img/icon.svg" alt="" />
