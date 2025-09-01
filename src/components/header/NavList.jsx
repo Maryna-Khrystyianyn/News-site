@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const NavList = ({ linkArray = [] }) => {
   return (
-    <nav>
+    <nav className="flex gap-6">
       {linkArray.map((link, index) => (
-        <Link key={link.id ?? index} to={link.url}>
+        <Link className={link.className} key={link.id ?? index} to={link.url}>
           {link.item}
         </Link>
       ))}

@@ -6,8 +6,9 @@ import User from "./User";
 const Header = () => {
   const homeLink = [
     {
+      className: "text-red-500",
       id: 1,
-      item: "Mega.news",
+      item: "MEGA.news",
       url: "/",
     },
     {
@@ -32,8 +33,10 @@ const Header = () => {
     },
   ];
   return (
-    <header>
-      <NavList linkArray={homeLink} />
+    <header className="flex">
+      <div>
+        <NavList linkArray={homeLink}  className="text-red-500"/>
+      </div>
         <Search/>
         <User/>
       <LeseZeichenIcon />
