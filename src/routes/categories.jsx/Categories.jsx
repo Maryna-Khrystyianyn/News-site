@@ -5,15 +5,12 @@ import NavList from "../../components/navList/NavList";
 const Categories = () => {
     const CategorieLinks = [
         {
-  item:(
-    <span className="flex items-center">
-        News <DownArrow/>
-    </span>
-  ),
+  item:"News"
+  ,
   url:"/",
 }, 
 {
-  item:"Categories",
+  item:(<span className="text-gray-500">{`> Categories`}</span>  ),
   url:"/categories"
 } 
 

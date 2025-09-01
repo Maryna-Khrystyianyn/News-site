@@ -4,10 +4,10 @@ import Navbar from "../../components/navbar/Navbar";
 import NavList from "../../components/navList/NavList";
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
-const NewsLinks = [{
+/* const NewsLinks = [{
   item:"News",
   url:"/"
-}]
+}] */
 
 const News = () => {
   const [news, setNews] = useState([]);
@@ -45,8 +45,8 @@ const News = () => {
   return (
     <section>
       <Navbar />
-      <NavList linkArr={NewsLinks}
-      />
+      {/* <NavList linkArr={NewsLinks}
+      /> */}
 
       <div className="w-[1512px] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
         {news.map((news, i) => {
