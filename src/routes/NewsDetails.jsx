@@ -3,6 +3,8 @@ import { useLocation, useParams, useNavigate } from "react-router-dom";
 import { domainFromUrl, formatData } from "../assets/utils";
 import Navbar from "../components/navbar/Navbar";
 import NavList from "../components/navList/NavList";
+import Writer from "../components/writer/Writer";
+import { Authors } from "../data/Author";
 
 const NewsDetails = () => {
   const { id } = useParams();
@@ -40,6 +42,7 @@ url:`/${id}`
   <section>
     <Navbar/>
     <NavList linkArr={DetailLinks}/>
+    <Writer author = {Authors[0]} />
     <div className="flex flex-col gap-5 w-[1072px] m-auto">
   <div className="bg-gray-100 pl-7 w-[1128px] h-[604px] rounded-xl">
     <div>

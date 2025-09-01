@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavList = ({ linkArr }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 max-w-[1511px] mx-auto my-5">
       {linkArr.map((link, i) => {
         const isLast = i === linkArr.length - 1;
 
