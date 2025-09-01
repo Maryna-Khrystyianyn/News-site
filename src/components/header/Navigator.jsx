@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 
 const Navigator = () => {
@@ -6,7 +5,10 @@ const Navigator = () => {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <nav className="text-sm text-gray-600 my-4">
+    <nav
+      aria-label="Breadcrumbs"
+      className="text-sm text-gray-600 my-4 mb-10 mt-10"
+    >
       <Link to="/" className="font-bold ">
         Home
       </Link>
@@ -19,9 +21,7 @@ const Navigator = () => {
             {isLast ? (
               <span className="font-semibold">{name}</span>
             ) : (
-              <Link to={routeTo}>
-                {name}
-              </Link>
+              <Link to={routeTo}>{name}</Link>
             )}
           </span>
         );

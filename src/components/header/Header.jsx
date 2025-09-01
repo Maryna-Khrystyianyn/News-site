@@ -6,7 +6,7 @@ import User from "./User";
 const Header = () => {
   const homeLink = [
     {
-      className: "text-red-500",
+      className: "text-[#fc4308] font-bold text-xl",
       id: 1,
       item: "MEGA.news",
       url: "/",
@@ -33,13 +33,21 @@ const Header = () => {
     },
   ];
   return (
-    <header className="flex">
+    <header className="flex h-12  justify-between items-center">
       <div>
-        <NavList linkArray={homeLink}  className="text-red-500"/>
+        <NavList linkArray={homeLink} />
       </div>
-        <Search/>
-        <User/>
-      <LeseZeichenIcon />
+      <div className="flex items-center">
+        <div className="">
+          <Search />
+        </div>
+        <div className="">
+          <User />
+        </div>
+        <div className="flex h-12 w-12 justify-around items-center bg-gray-200 rounded-[12px]"> 
+          <LeseZeichenIcon />
+        </div>
+      </div>
     </header>
   );
 };
