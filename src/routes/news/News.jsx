@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import NewsCardItem from "../../components/NewsCardItem";
 import Navbar from "../../components/navbar/Navbar";
 import NavList from "../../components/navList/NavList";
+import Writer from "../../components/writer/Writer";
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+import { Authors } from "../../data/Author";
 
 /* const NewsLinks = [{
   item:"News",
@@ -45,6 +47,7 @@ const News = () => {
   return (
     <section>
       <Navbar />
+      <Writer author = {Authors[0]}/>
       {/* <NavList linkArr={NewsLinks}
       /> */}
 

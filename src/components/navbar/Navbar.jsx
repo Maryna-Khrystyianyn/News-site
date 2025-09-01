@@ -5,7 +5,7 @@ import { DownArrow, FlagIcon } from "../../assets/AllImages";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center ">
+    <div className="flex justify-between items-center max-w-[1511px] mx-auto my-5">
       <div className="flex items-center gap-10 ">
         <Link className="text-red-500 font-bold text-2xl" to="/">
           Mega.News
