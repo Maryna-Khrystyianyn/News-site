@@ -2,6 +2,7 @@ import NavList from "./NavList";
 import { LeseZeichenIcon } from "../../assets/Image";
 import Search from "./Search";
 import User from "./User";
+
 const Header = () => {
   const homeLink = [
     {

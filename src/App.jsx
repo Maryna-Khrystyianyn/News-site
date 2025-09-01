@@ -4,6 +4,7 @@ import AppRoutes from "./routes";
 import News from "./routes/news/News";
 import { LeseZeichenIcon } from "./assets/Image";
 import Navigator from "./components/header/Navigator";
+import Writer from "./components/writer/Writer";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <Header />
       <Navigator/>
+      <Writer/>
       <AppRoutes />
     </>
   );
