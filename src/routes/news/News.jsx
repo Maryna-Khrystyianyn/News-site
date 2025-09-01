@@ -37,11 +37,14 @@ const News = () => {
     fetchNews();
   }, []);
   return (
+    <section>
+ 
     <div className="w-[1512px] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
       {news.map((news, i) => {
         return <NewsCardItem key={news.id} newsItem={news} id={news.id} />;
       })}
     </div>
+    </section>
   );
 };
 
