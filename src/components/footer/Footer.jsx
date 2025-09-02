@@ -1,8 +1,14 @@
+import FollowSection from "./FollowSection";
+import Mapfooter from "./Mapfooter";
+import NewComents from "./NewComments";
 
 
 const Footer = () => {
     return ( <footer>
-        Footer
+        <Mapfooter/>
+        <NewComents/>
+        <FollowSection/>
+
     </footer> );
 }
  
