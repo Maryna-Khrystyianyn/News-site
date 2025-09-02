@@ -4,7 +4,7 @@ import Title from "../title/Title";
 
 const Mapfooter = () => {
   return (
-    <div className="bg-gray-100 rounded-r-xl max-w-[948px] flex flex-col p-[20px] ml-10 my-10 ">
+    <div className="bg-gray-100 rounded-r-xl max-w-[948px] flex flex-col p-[20px]  my-10 ">
       <div className="flex gap-10 justify-end">
         <div className="max-w-[400px]">
           <Title title="Mega News" />
