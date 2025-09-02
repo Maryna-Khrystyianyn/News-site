@@ -1,44 +1,92 @@
+import { EmailIcon, InstaIcon, XIcon } from "../../assets/Image";
+
 export const MainFooterSection = () => {
   return (
-    <section>
-      <div>
-        <h3>Mega News</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima quia
-          inventore deserunt quibusdam velit harum quae tempore laborum
-          accusamus commodi.
-        </p>
-        <h3>Newsletter</h3>
-        <input type="text" placeholder="Write Your Email .." />
-      </div>
-      <div>
-        <h3>Categories</h3>
-        <ol>
-          <li>Culture</li>
-          <li>Fashion</li>
-          <li>Featured</li>
-          <li>Food</li>
-          <li>Healthy Living</li>
-          <li>Technology</li>
-        </ol>
-        <h3>Social Network</h3>
-        <div>
-          <a href="https://www.instagram.com/" target="_blank">
-            Instagram
-          </a>
-          <a href="https://x.com/" target="_blank">
-            Twitter
-          </a>
+    <section className="bg-gray-100 w-[948px] h-[483px] rounded-tr-[50px] rounded-br-[50px] relative">
+      {/* <div className="bg-gray-100 w-[948px] h-[483px] absolute left-[-204px] bottom-3 -z-10"></div> */}
+      <div className="flex ml-[204px] mt-[40px]">
+        <div className="grid w-[399px] h-[202px]">
+          <div className="flex items-center gap-1">
+            <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
+            <h3 className="text-2xl font-bold">Mega News</h3>
+          </div>
+
+          <p className="mt-3 ml-[10px] w-[350px] h-[159px] text-[14px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+            laudantium hic accusantium nulla consectetur at cumque quo
+            voluptatem! Quia, architecto exercitationem eos, ad velit ex
+            incidunt fuga, eveniet magnam mollitia perferendis non ut ipsum
+            corporis officiis porro necessitatibus dolore ab.
+          </p>
+          <div className="w-[399px] h-[91px]">
+            <div className="flex items-center gap-1">
+              <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
+              <h3 className="text-2xl font-bold">Newsletter</h3>
+            </div>
+
+            <div className="mt-3 flex bg-white rounded-[12px] h-[48px] w-[399px] items-center justify-evenly">
+              <input
+                className="w-[343px] h-[14px]"
+                type="text"
+                placeholder="Write Your Email .."
+              />
+              <EmailIcon />
+            </div>
+          </div>
+        </div>
+        <div className="ml-28">
+          <div className="w-[383px] h-[108px]">
+            <div className="flex items-center gap-1">
+              <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
+              <h3 className="text-2xl font-bold">Categories</h3>
+            </div>
+
+            <ol className="mt-3 text-[10px] text-[#3E3232]">
+              <li className="mb-2 text-[#3E3232]">Culture</li>
+              <li className="mb-2">Fashion</li>
+              <li className="mb-2">Featured</li>
+              <li className="mb-2">Food</li>
+              <li className="mb-2">Healthy Living</li>
+              <li className="mb-2">Technology</li>
+            </ol>
+          </div>
+          <div className="h-[83px] w-[183px] flex flex-col mt-24">
+            <div className="flex items-center gap-1">
+              <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
+              <h3 className="text-2xl font-bold">Social Network</h3>
+            </div>
+
+            <div className="mt-3 flex gap-3">
+              <a
+                className="w-[128px] h-[40px] gap-2 bg-gradient-to-r from-[#FF7563] to-[#F45C9F] text-white flex items-center justify-center  rounded-[12px]"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <div className="mt-0.5">
+                  <InstaIcon />
+                </div>{" "}
+                Instagram
+              </a>
+              <a href="https://x.com/" target="_blank">
+                <XIcon />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <div>
-          <a href="#">Privacy Policy</a>
-          <p>|</p>
-          <a href="#">Terms & Conditions</a>
+
+      <div className="flex w-[908px] h-[48px] bg-gray-200 justify-between items-center rounded-tr-[12px] rounded-br-[12px] absolute bottom-8 left-0">
+        <div className="flex gap-1 ml-[204px]">
+          <a className="text-[12px] text-[#3E3232]" href="#">
+            Privacy Policy
+          </a>
+          <p className="text-[12px] text-[#3E3232]">|</p>
+          <a className="text-[12px] text-[#3E3232]" href="#">
+            Terms & Conditions
+          </a>
         </div>
-        <div>
-          <p>All Copyright (C) 2022 Reserved</p>
+        <div className="mr-5">
+          <p className="text-[12px] text-[#3E3232]">All Copyright (C) 2022 Reserved</p>
         </div>
       </div>
     </section>

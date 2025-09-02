@@ -8,14 +8,15 @@ import Writer from "./components/writer/Writer";
 import { Footer } from "./components/footer/Footer";
 
 function App() {
-
   return (
     <div className="w-[1512px] m-auto">
       <Header />
-      <Navigator/>
-      <Writer/>
-      <Footer/>
+      <Navigator />
+      <Writer />
       <AppRoutes />
+      <div className="absolute left-0 mt-60">
+        <Footer />
+      </div>
     </div>
   );
 }

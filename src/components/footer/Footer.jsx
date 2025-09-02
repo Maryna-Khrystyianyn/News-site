@@ -4,7 +4,7 @@ import { NewComments } from "./NewComments";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="flex w-[1920px] h-[483px] items-center">
       <MainFooterSection />
       <NewComments />
       <FollowSection />
