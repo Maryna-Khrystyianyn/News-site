@@ -9,12 +9,12 @@ import Writer from "./components/writer/Writer";
 function App() {
 
   return (
-    <>
+    <div className="w-[1512px] m-auto">
       <Header />
       <Navigator/>
       <Writer/>
       <AppRoutes />
-    </>
+    </div>
   );
 }
 
