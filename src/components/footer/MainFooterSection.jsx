@@ -1,4 +1,6 @@
 import { EmailIcon, InstaIcon, XIcon } from "../../assets/Image";
+import { Title  } from "../Title";
+
 
 export const MainFooterSection = () => {
   return (
@@ -6,10 +8,7 @@ export const MainFooterSection = () => {
       {/* <div className="bg-gray-100 w-[948px] h-[483px] absolute left-[-204px] bottom-3 -z-10"></div> */}
       <div className="flex ml-[204px] mt-[40px]">
         <div className="grid w-[399px] h-[202px]">
-          <div className="flex items-center gap-1">
-            <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
-            <h3 className="text-2xl font-bold">Mega News</h3>
-          </div>
+        <Title title="Mega News"/>
 
           <p className="mt-3 ml-[10px] w-[350px] h-[159px] text-[14px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
@@ -19,10 +18,8 @@ export const MainFooterSection = () => {
             corporis officiis porro necessitatibus dolore ab.
           </p>
           <div className="w-[399px] h-[91px]">
-            <div className="flex items-center gap-1">
-              <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
-              <h3 className="text-2xl font-bold">Newsletter</h3>
-            </div>
+                 < Title title="Newsletter"/>
+
 
             <div className="mt-3 flex bg-white rounded-[12px] h-[48px] w-[399px] items-center justify-evenly">
               <input
@@ -36,10 +33,8 @@ export const MainFooterSection = () => {
         </div>
         <div className="ml-28">
           <div className="w-[383px] h-[108px]">
-            <div className="flex items-center gap-1">
-              <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
-              <h3 className="text-2xl font-bold">Categories</h3>
-            </div>
+                <Title title="Categories"/>
+
 
             <ol className="mt-3 text-[10px] text-[#3E3232]">
               <li className="mb-2 text-[#3E3232]">Culture</li>
@@ -51,10 +46,8 @@ export const MainFooterSection = () => {
             </ol>
           </div>
           <div className="h-[83px] w-[183px] flex flex-col mt-24">
-            <div className="flex items-center gap-1">
-              <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>
-              <h3 className="text-2xl font-bold">Social Network</h3>
-            </div>
+                  <Title title="Social Network"/>
+
 
             <div className="mt-3 flex gap-3">
               <a
@@ -86,9 +79,12 @@ export const MainFooterSection = () => {
           </a>
         </div>
         <div className="mr-5">
-          <p className="text-[12px] text-[#3E3232]">All Copyright (C) 2022 Reserved</p>
+          <p className="text-[12px] text-[#3E3232]">
+            All Copyright (C) 2022 Reserved
+          </p>
         </div>
       </div>
     </section>
   );
 };
+

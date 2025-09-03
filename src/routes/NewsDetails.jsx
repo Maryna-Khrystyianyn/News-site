@@ -34,7 +34,7 @@ const NewsDetails = () => {
         <a className="flex items-center" href="#">
           <img
             className="m-2 w-[16px]"
-            src="../../public/img/CalenderIcon.svg"
+            src="/img/CalenderIcon.svg"
             alt=""
           />{" "}
           {published}
@@ -42,7 +42,7 @@ const NewsDetails = () => {
         <a className="flex items-center" href="#">
           <img
             className="m-2 w-[16px]"
-            src="../../public/img/CommentsIcon.svg"
+            src="/img/CommentsIcon.svg"
             alt=""
           />{" "}
           Comments: 35
@@ -50,7 +50,7 @@ const NewsDetails = () => {
         <a className="flex items-center" href="#">
           <img
             className="m-2 w-[16px]"
-            src="../../public/img/OrdnerIcon.svg"
+            src="/img/OrdnerIcon.svg"
             alt=""
           />{" "}
           Category: Sport
@@ -71,7 +71,7 @@ const NewsDetails = () => {
       </p>
       <img
         className="m-auto w-[872px] h-[486px]"
-        src="../../public/img/01.png"
+        src="/img/01.png"
         alt="Sportbild"
       />
       <h2 className="font-bold">

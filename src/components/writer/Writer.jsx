@@ -7,14 +7,14 @@ const Writer = () => {
     <>
       <div className="flex flex-col items-center justify-center w-[1512px] h-[260px] bg-gray-100 rounded-[12px] mb-20 mt-1000"> 
         <img
-          src="../../../public/img/TitleImage.svg"
+          src="/img/TitleImage.svg"
           alt="Purple Gaaxy"
           className="w-[1491px] h-[150px] rounded-[12px]"
         />
         <div className="flex justify-between items-center w-[1491px] mt-3">
           <div className="flex items-center gap-3">
             <img
-              src="../../../public/img/author1.svg"
+              src="/img/author1.svg"
               alt="Picture of the auhor"
             />
             <h3>Louis Hoebregts</h3>

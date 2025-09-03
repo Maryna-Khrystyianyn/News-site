@@ -4,7 +4,7 @@ const User = () => {
   const users = [
     {
       name: "Behzad",
-      img: "../../../public/img/image.png",
+      img: "/img/image.png",
     },
   ];
 

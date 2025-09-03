@@ -41,7 +41,7 @@ const NewsCardItem = ({ newsItem, id }) => {
           <div className="bg-gray-100 flex flex-col w-[374px] h-[72px] rounded-[12px]">
             <div className="flex justify-between items-center px-4 py-2">
               <img
-                src="../../public/img/unsplash_L2dTmhQzx4Q.png"
+                src="/img/unsplash_L2dTmhQzx4Q.png"
                 alt=""
                 className="w-[44px] h-[44px] rounded-[12px]"
               />
@@ -49,7 +49,7 @@ const NewsCardItem = ({ newsItem, id }) => {
                 <h3 className="font-bold">{author}</h3>
                 <p>{published}</p>
               </div>
-              <img src="../../public/img/icon.svg" alt="" />
+              <img src="/img/icon.svg" alt="" />
             </div>
           </div>
         </div>
