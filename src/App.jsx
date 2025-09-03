@@ -6,11 +6,13 @@ import { LeseZeichenIcon } from "./assets/Image";
 import Navigator from "./components/header/Navigator";
 import Writer from "./components/writer/Writer";
 import { Footer } from "./components/footer/Footer";
+import { AboutUsPage } from "./components/aboutUs/AboutUsPage";
 
 function App() {
   return (
     <div className="w-[1512px] m-auto">
       <Header />
+      <AboutUsPage/>
       <Navigator />
       <Writer />
       <AppRoutes />

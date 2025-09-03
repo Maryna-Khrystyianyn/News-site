@@ -1,11 +1,11 @@
 import { FollowerIcon, PostIcon, StarIcon } from "../../assets/Image";
 import Header from "../header/Header";
 import Navigator from "../header/Navigator";
-
+// mt entfernen zeile 8 =========================================================
 const Writer = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-[1512px] h-[260px] bg-gray-100 rounded-[12px] mb-20">
+      <div className="flex flex-col items-center justify-center w-[1512px] h-[260px] bg-gray-100 rounded-[12px] mb-20 mt-1000"> 
         <img
           src="../../../public/img/TitleImage.svg"
           alt="Purple Gaaxy"
