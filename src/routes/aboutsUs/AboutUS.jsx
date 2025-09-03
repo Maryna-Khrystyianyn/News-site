@@ -1,5 +1,8 @@
+import AboutInformation from "../../components/aboutInformation/AboutInformation";
+import AboutMedia from "../../components/aboutMedia/AboutMedia";
 import Navbar from "../../components/navbar/Navbar";
 import NavList from "../../components/navList/NavList";
+import Team from "../../components/team/Team";
 
 const AboutUs = () => {
 
@@ -16,6 +19,10 @@ const AboutUs = () => {
     return (<div>
         <Navbar/>
         <NavList linkArr={AboutLinks}/>
+        <AboutMedia/>
+        <AboutInformation/>
+        <Team/>
+        
 
     </div>  );
 }
