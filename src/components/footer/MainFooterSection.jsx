@@ -1,14 +1,13 @@
 import { EmailIcon, InstaIcon, XIcon } from "../../assets/Image";
-import { Title  } from "../Title";
-
+import { Title } from "../Title";
 
 export const MainFooterSection = () => {
   return (
-    <section className="bg-gray-100 w-[948px] h-[483px] rounded-tr-[50px] rounded-br-[50px] relative">
+    <section className="bg-gray-100 w-[948px] h-[483px] rounded-tr-[50px] rounded-br-[50px] relative ">
       {/* <div className="bg-gray-100 w-[948px] h-[483px] absolute left-[-204px] bottom-3 -z-10"></div> */}
       <div className="flex ml-[204px] mt-[40px]">
         <div className="grid w-[399px] h-[202px]">
-        <Title title="Mega News"/>
+          <Title title="Mega News" />
 
           <p className="mt-3 ml-[10px] w-[350px] h-[159px] text-[14px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
@@ -18,8 +17,7 @@ export const MainFooterSection = () => {
             corporis officiis porro necessitatibus dolore ab.
           </p>
           <div className="w-[399px] h-[91px]">
-                 < Title title="Newsletter"/>
-
+            <Title title="Newsletter" />
 
             <div className="mt-3 flex bg-white rounded-[12px] h-[48px] w-[399px] items-center justify-evenly">
               <input
@@ -33,8 +31,7 @@ export const MainFooterSection = () => {
         </div>
         <div className="ml-28">
           <div className="w-[383px] h-[108px]">
-                <Title title="Categories"/>
-
+            <Title title="Categories" />
 
             <ol className="mt-3 text-[10px] text-[#3E3232]">
               <li className="mb-2 text-[#3E3232]">Culture</li>
@@ -45,12 +42,31 @@ export const MainFooterSection = () => {
               <li className="mb-2">Technology</li>
             </ol>
           </div>
-          <div className="h-[83px] w-[183px] flex flex-col mt-24">
-                  <Title title="Social Network"/>
-
+          <div className="h-[83px] w-[183px] flex flex-col mt-26">
+            <Title title="Social Network" />
 
             <div className="mt-3 flex gap-3">
               <a
+                className="w-[128px] h-[40px] gap-2 bg-gradient-to-r from-[#FF7563] to-[#F45C9F] text-white flex items-center justify-center rounded-[12px]"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <span className="mt-0.5">
+                  <InstaIcon />
+                </span>
+                Instagram
+              </a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+              >
+                <XIcon />
+              </a>
+              {/* <a
                 className="w-[128px] h-[40px] gap-2 bg-gradient-to-r from-[#FF7563] to-[#F45C9F] text-white flex items-center justify-center  rounded-[12px]"
                 href="https://www.instagram.com/"
                 target="_blank"
@@ -62,13 +78,29 @@ export const MainFooterSection = () => {
               </a>
               <a href="https://x.com/" target="_blank">
                 <XIcon />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex w-[908px] h-[48px] bg-gray-200 justify-between items-center rounded-tr-[12px] rounded-br-[12px] absolute bottom-8 left-0">
+      {/* Bottom bar: vollflächig von links nach rechts, weniger Wrapper */}
+      <div className="absolute bottom-8 left-0 right-0 w-[908px] h-[48px] bg-gray-200 rounded-tr-[12px] rounded-br-[12px] flex items-center justify-between pl-[204px] pr-5">
+        <nav className="flex items-center gap-1 text-[12px] text-[#3E3232]">
+          <a className="hover:underline" href="#">
+            Privacy Policy
+          </a>
+          <span aria-hidden="true">|</span>
+          <a className="hover:underline" href="#">
+            Terms &amp; Conditions
+          </a>
+        </nav>
+        <p className="text-[12px] text-[#3E3232]">
+          All Copyright (C) 2022 Reserved
+        </p>
+      </div>
+
+      {/* <div className="flex w-[908px] h-[48px] bg-gray-200 justify-between items-center rounded-tr-[12px] rounded-br-[12px] absolute bottom-8 left-0">
         <div className="flex gap-1 ml-[204px]">
           <a className="text-[12px] text-[#3E3232]" href="#">
             Privacy Policy
@@ -82,9 +114,8 @@ export const MainFooterSection = () => {
           <p className="text-[12px] text-[#3E3232]">
             All Copyright (C) 2022 Reserved
           </p>
-        </div>
-      </div>
+        </div> 
+      </div>*/}
     </section>
   );
 };
-

@@ -16,7 +16,7 @@ export const FollowSectionPhotos = () => {
   }, []);
 
   return (
-    <div className="w-[360px] h-[403px] grid grid-cols-3 ">
+    <div className="w-[360px] h-[403px] grid grid-cols-3">
       {photos.map((c) => (
         <div key={c.id}>
           <img className="w-[104px] h-[104px] rounded-[12px]" src={c.src.medium} alt={c.alt} />
