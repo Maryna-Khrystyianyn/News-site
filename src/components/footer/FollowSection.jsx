@@ -1,10 +1,10 @@
 import { FollowSectionPhotos } from "./FollowSectionPhotos";
-import { Title } from "../Title";
+import { Headline } from "../headline/Headline";
 
 export const FollowSection = () => {
   return (
     <section className="ml-5 w-[360px] h-[403px]">
-      <Title title="Follow On Instagram" />
+      <Headline title="Follow On Instagram" />
       <FollowSectionPhotos />
     </section>
 

@@ -1,6 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 
-const Navigator = () => {
+// "Navigator" ist eine in React implementierte Variable und darf nicht verwendet werden.
+// Ich habe daher den Namen des Components geändert.
+
+const AppNavigator = () => {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
@@ -30,4 +33,4 @@ const Navigator = () => {
   );
 };
 
-export default Navigator;
+export default AppNavigator;

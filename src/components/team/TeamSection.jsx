@@ -1,7 +1,9 @@
-import { Title } from "../Title";
-import { TeamCardItem } from "./../TeamCardItem";
+import { Headline } from "../headline/Headline";
+import { TeamCardItem } from "./TeamCardItem";
 
 export const TeamSection = () => {
+  // Das Array mit den Daten kann auch im Ordner assets/data.jsx liegen, 
+  // damit ihr nicht alles in einer Datei habt.
   const TEAM = [
     {
       img: "/img/meganewsteam/Behzad.svg",
@@ -38,7 +40,7 @@ export const TeamSection = () => {
   return (
     <div className="mt-120">
       <div>
-        <Title title="Mega News Team" className="ml-5" />
+        <Headline title="Mega News Team" className="ml-5" />
       </div>
       <div>
         <section>

@@ -1,6 +1,4 @@
 import { FollowerIcon, PostIcon, StarIcon } from "../../assets/Image";
-import Header from "../header/Header";
-import Navigator from "../header/Navigator";
 // mt entfernen zeile 8 =========================================================
 const Writer = () => {
   return (

@@ -1,4 +1,4 @@
-export const Title = ({ title }) => {
+export const Headline = ({ title }) => {
   return (
     <div className="flex items-center gap-1 mb-4">
       <div className="w-[4px] h-[10px] bg-[#F81539] rounded-[12px]"></div>

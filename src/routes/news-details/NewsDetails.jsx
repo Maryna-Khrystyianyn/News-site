@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
-import { domainFromUrl, formatData } from "../assets/utils";
+import { useLocation, useNavigate } from "react-router-dom";
+import { formatData } from "../../assets/utils";
 
 const NewsDetails = () => {
-  const { id } = useParams();
+  // TODO: Falls unbenutzt, bitte löschen 
+  // const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const newsItem = location.state?.newsItem;

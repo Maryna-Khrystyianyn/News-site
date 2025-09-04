@@ -1,6 +1,5 @@
-export const VideoSection = () => {
+export const Video = () => {
   return (
-    <>
       <section className="bg-gray-100 w-[1512px] h-[604px] rounded-[12px] flex flex-col justify-center mb-10">
         <div>
           <h1 className="text-[36px] font-medium ml-[32px] mb-8">We pay attention to your needs and do the best design.</h1>
@@ -37,6 +36,5 @@ export const VideoSection = () => {
           ></iframe>
         </div>
       </section>
-    </>
   );
 };

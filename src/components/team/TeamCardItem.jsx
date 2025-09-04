@@ -1,4 +1,3 @@
-// components/aboutUs/TeamCard.jsx
 export const TeamCardItem = ({ img, name, role }) => {
   return (
     <div className="w-[232px] h-[266px] rounded-[12px] bg-white shadow-lg p-4 flex flex-col items-center">
@@ -16,6 +15,7 @@ export const TeamCardItem = ({ img, name, role }) => {
   );
 };
 
+// TODO: Falls unbenutzt, bitte löschen
 const TEAM = [
   {
     img: "/img/meganewsteam/Behzad.svg",

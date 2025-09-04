@@ -1,6 +1,6 @@
 import { AddressIcon, ClockIcon, EmailIcon, FaxIcon, PhoneIcon } from "../../assets/Image";
 // 
-export const MapSection = () => {
+export const Map = () => {
   return (
     <>
 

@@ -3,7 +3,7 @@ import { LeseZeichenIcon } from "../../assets/Image";
 import Search from "./Search";
 import User from "./User";
 
-const Header = () => {
+export const Header = () => {
   const homeLink = [
     {
       className: "text-[#fc4308] font-bold text-xl",
@@ -51,5 +51,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;
