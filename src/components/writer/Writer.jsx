@@ -5,7 +5,7 @@ import Navigator from "../header/Navigator";
 const Writer = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-[1512px] h-[260px] bg-gray-100 rounded-[12px] mb-20 mt-1000"> 
+      <div className="flex flex-col items-center justify-center w-[1512px] h-[260px] bg-gray-100 rounded-[12px] mb-20 mt-15"> 
         <img
           src="/img/TitleImage.svg"
           alt="Purple Gaaxy"
