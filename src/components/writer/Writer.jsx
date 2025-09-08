@@ -14,7 +14,7 @@ const Writer = () => {
         <div className="flex justify-between items-center w-[1491px] mt-3">
           <div className="flex items-center gap-3">
             <img
-              src="/img/author1.svg"
+              src="/img/AuthorLouis.svg"
               alt="Picture of the auhor"
             />
             <h3>Louis Hoebregts</h3>
