@@ -1,3 +1,5 @@
+import CarouselNews from "../../components/carouselNews/CarouselNews";
+import CategoryCarousel from "../../components/categoryCarousel/CategoryCarousel";
 import Navbar from "../../components/navbar/Navbar";
 import NavList from "../../components/navList/NavList";
 
@@ -17,7 +19,12 @@ const Pages = () => {
 
     return (<div>
         <Navbar/>
-        <NavList linkArr={PagesLinks}/></div>  );
+        <NavList linkArr={PagesLinks}/>
+        <CategoryCarousel />
+      <CarouselNews />
+        
+        </div>  );
+        
 }
  
 export default Pages;

@@ -1,4 +1,6 @@
 import { DownArrow } from "../../assets/AllImages";
+import CarouselNews from "../../components/carouselNews/CarouselNews";
+import CategoryCarousel from "../../components/categoryCarousel/CategoryCarousel";
 import Navbar from "../../components/navbar/Navbar";
 import NavList from "../../components/navList/NavList";
 
@@ -18,6 +20,8 @@ const Categories = () => {
     return ( <div>
         <Navbar/>
         <NavList linkArr={CategorieLinks}/>
+        <CategoryCarousel />
+      <CarouselNews />
         </div> );
 }
  
