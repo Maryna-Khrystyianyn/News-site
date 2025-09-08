@@ -1,48 +1,65 @@
-import "./App.css";
-import Header from "./components/header/Header";
-import AppRoutes from "./routes";
-import News from "./routes/news/News";
-import { LeseZeichenIcon } from "./assets/Image";
-import Navigator from "./components/header/Navigator";
-import Writer from "./components/writer/Writer";
-import { Footer } from "./components/footer/Footer";
-import { AboutUsPage } from "./components/aboutUs/AboutUsPage";
-import { MapSection } from "./components/aboutUs/MapSection";
-import { TeamSection } from "./components/aboutUs/TeamSection";
-import { VideoSection } from "./components/aboutUs/VideoSection";   
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "../src/layouts/MainLayut.jsx";
+import News from "./pages/News.jsx";
+import NewsDetails from "./pages/NewsDetails.jsx";
 
-function App() {
+export default function App() {
   return (
-
-    // <div className="w-[1512px] m-auto">
-    //   <Header />
-    //   <Navigator />
-    //   <Writer />
-    //   <AppRoutes />
-    //   <div className="absolute left-0 mt-60">
-    //     <Footer />
-    //   </div>
-    // </div>
-      <>
-      <div className="w-[1512px] m-auto pt-5">
-          <Header />
-          <Navigator />
-          <section>
-            <VideoSection />
-          </section>
-          <section className="absolute left-0">
-            {" "}
-            <MapSection />{" "}
-          </section>
-          <section>
-            <TeamSection />
-          </section>
-          <div className="absolute left-0 mt-30">
-            <Footer />
-          </div>
-          </div>
-        </>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<News />} />
+        <Route path="/:id" element={<NewsDetails />} />
+      </Route>
+    </Routes>
   );
 }
 
-export default App;
+
+// import "./App.css";
+// import Header from "./components/header/Header.jsx";
+// import AppRoutes from "./routes/Index.jsx";
+// import News from "./routes/news/News.jsx";
+// import { LeseZeichenIcon } from "./assets/Image.jsx";
+// import Navigator from "./components/header/Navigator.jsx";
+// import Writer from "./components/writer/Writer.jsx";
+// import { Footer } from "./Footer.jsx"
+// import { AboutUsPage } from "./components/aboutUs/AboutUsPage.jsx";
+// import { MapSection } from "./components/aboutUs/MapSection.jsx";
+// import { TeamSection } from "./components/aboutUs/TeamSection.jsx";
+// import { VideoSection } from "./components/aboutUs/VideoSection.jsx";   
+
+// function App() {
+//   return (
+
+//     // <div className="w-[1512px] m-auto">
+//     //   <Header />
+//     //   <Navigator />
+//     //   <Writer />
+//     //   <AppRoutes />
+//     //   <div className="absolute left-0 mt-60">
+//     //     <Footer />
+//     //   </div>
+//     // </div>
+//       <>
+//       <div className="w-[1512px] m-auto pt-5">
+//           <Header />
+//           <Navigator />
+//           <section>
+//             <VideoSection />
+//           </section>
+//           <section className="absolute left-0">
+//             {" "}
+//             <MapSection />{" "}
+//           </section>
+//           <section>
+//             <TeamSection />
+//           </section>
+//           <div className="absolute left-0 mt-30">
+//             <Footer />
+//           </div>
+//           </div>
+//         </>
+//   );
+// }
+
+// export default App;

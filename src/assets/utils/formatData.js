@@ -1,10 +1,3 @@
-export const domainFromUrl = (url) => {
-    try {
-        return new URL(url).hostname.replace(/^www\./, "")
-    } catch {
-        return ''
-    }
-}
 export const formatData = (iso) => {
     try {
         const dateObj = new Date(iso); // d ist ein JavaScript Date Objekt.

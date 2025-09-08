@@ -53,7 +53,7 @@ export const NewCommentsCard = () => {
   // }, []);
 
   return (
-    <div className="ml-5 w-[360px] h-[360px]">
+    <div className=" w-[360px] h-[360px]">
       {comments.map((c) => (
         <div
           key={c.id}

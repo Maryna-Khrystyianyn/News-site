@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import NewsCardItem from "../../components/NewsCardItem";
+import NewsCardItem from "../components/NewsCardItem.jsx";
 
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
