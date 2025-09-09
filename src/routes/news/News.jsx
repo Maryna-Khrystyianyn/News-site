@@ -8,6 +8,7 @@ import { Authors } from "../../data/Author";
 import CategoryCarousel from "../../components/categoryCarousel/CategoryCarousel";
 import CarouselNews from "../../components/carouselNews/CarouselNews";
 import PopularPostCarousel from "../../components/popularPost/PopularPostCarousel";
+import LatestVideo from "../../components/latestVideo/LatestVideo";
 
 /* const NewsLinks = [{
   item:"News",
@@ -74,6 +75,8 @@ const News = () => {
           return <NewsCardItem key={news.id} newsItem={news} id={news.id} />;
         })}
       </div>
+
+      <LatestVideo/>
     </section>
   );
 };
