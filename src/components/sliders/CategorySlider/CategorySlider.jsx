@@ -12,11 +12,14 @@ export const CategorySlider = () => {
       slidesPerView={8}
       navigation={true}
       modules={[Navigation]}
-      className="bg-gray-100 rounded-[12px] w-[1512px] h-[68px] m-auto mt-[20px] mb-[30px] flex items-center justify-around"
+      className="bg-gray-200 rounded-[12px] w-[1512px] h-[68px] m-auto mt-[20px] mb-[30px] flex items-center justify-around"
     >
       {categories.map((categories, i) => (
         <SwiperSlide key={i} className="swiper_item">
-          <CategoryPill label={categories.category} imageUrl={categories.image} />
+          <CategoryPill
+            label={categories.category}
+            imageUrl={categories.image}
+          />
         </SwiperSlide>
       ))}
     </Swiper>
