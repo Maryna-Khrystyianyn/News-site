@@ -46,7 +46,7 @@ const NewComents = () => {
 
       <div className="max-w-[360px] flex flex-wrap gap-5 mt-3">
         {comments.map((comment) => (
-          <div className="bg-gray-100 rounded-xl w-full p-5">
+          <div  key={comment.id} className="bg-gray-100 rounded-xl w-full p-5">
             <h2 className="font-bold">{comment.name}</h2>
             <p className="text-sm text-gray-600">{shortenText(comment.body,5)}</p>
           </div>

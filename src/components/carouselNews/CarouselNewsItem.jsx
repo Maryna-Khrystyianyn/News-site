@@ -2,7 +2,7 @@
 
 
 
-const CarouselNewsItem = ({newsItem, widthItem, textLength}) => {
+const CarouselNewsItem = ({newsItem, textLength}) => {
     const {
         urlToImage,
        
@@ -21,11 +21,11 @@ const CarouselNewsItem = ({newsItem, widthItem, textLength}) => {
       : words.slice(0, wordLimit).join(" ") + "...";
   }
 
-      console.log("width",widthItem)
+      
   return (
     <div className="grow">
-  <div className={`w-[${widthItem}] h-[452px] overflow-hidden rounded-2xl flex justify-center relative`}>
-    <img className={`w-[${widthItem}] h-full object-cover`} src={urlToImage} alt={title} />
+  <div className={`w-full h-[452px] overflow-hidden rounded-2xl flex justify-center relative`}>
+    <img className={`w-full h-full object-cover`} src={urlToImage} alt={title} />
     <div className="absolute   opacity-90 bottom-0 h-[117px]  w-[94%]  rounded-xl m-3 bg-gray-200/80 p-4">
       <p className="font-bold">{title}</p>
       <p>{text}</p>

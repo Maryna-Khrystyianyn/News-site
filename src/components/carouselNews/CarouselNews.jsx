@@ -11,7 +11,7 @@ import "./carouselNews.css"
 
 const CarouselNews = () => {
   const [news, setNews] = useState([]);
-  
+  const [loading, setLoading] = useState(true);
 
   const controller = new AbortController();
   const url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${API_KEY}`;
@@ -54,7 +54,7 @@ const CarouselNews = () => {
               <CarouselNewsItem
                 key={news.id}
                 newsItem={news}
-                widthItem={"360px"}
+                
                 textLength={10}
               />
             );
@@ -66,7 +66,7 @@ const CarouselNews = () => {
             {lastNews.map((news) => {
               return (
                 <SwiperSlide key={news.id}>
-                  <CarouselNewsItem newsItem={news} widthItem={"744px"} textLength={30}/>
+                  <CarouselNewsItem newsItem={news}  textLength={30}/>
                 </SwiperSlide>
               );
             })}
