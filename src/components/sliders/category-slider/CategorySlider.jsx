@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { categories } from "../../../Data/categoryData";
 import { CategoryPill } from "./CategoryPill";
+import "./category-slider.css";
 
 export const CategorySlider = () => {
   return (
@@ -12,8 +13,7 @@ export const CategorySlider = () => {
       slidesPerView={8}
       navigation={true}
       modules={[Navigation]}
-      className="bg-gray-200 rounded-[12px] w-[1512px] h-[68px] m-auto mt-[20px] mb-[30px] flex items-center justify-around"
-    >
+      className="bg-gray-200 rounded-[12px] w-[1512px] h-[68px] m-auto mt-[20px] mb-[30px] flex items-center justify-around category-slider-container">
       {categories.map((categories, i) => (
         <SwiperSlide key={i} className="swiper_item">
           <CategoryPill

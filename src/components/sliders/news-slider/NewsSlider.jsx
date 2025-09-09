@@ -17,11 +17,10 @@ export const NewsSlider = () => {
   return (
     <Swiper
       spaceBetween={24}
-      slidesPerView="auto"              // <— WICHTIG: unterschiedliche Breiten erlauben
-      navigation
+      slidesPerView="auto" // <— WICHTIG: unterschiedliche Breiten erlauben
+      navigation={true}
       modules={[Navigation]}
-      className="w-full max-w-[1512px] mx-auto"
-    >
+      className="w-full max-w-[1512px] mx-auto">
       {articles.map((a, index) => {
         const isLast = index === articles.length - 1;
         return (
@@ -38,12 +37,15 @@ export const NewsSlider = () => {
 
               {/* Overlay */}
               <div
-                className={
-                  `absolute bottom-3 h-[117px] rounded-[12px] bg-white/70 backdrop-blur p-4
-                   ${isLast ? "left-6 right-6" : "left-1/2 -translate-x-1/2 w-[339px]"}`
-                }
-              >
-                <h2 className="font-bold text-[25px] leading-snug">{a.title}</h2>
+                className={`absolute bottom-3 h-[117px] rounded-[12px] bg-white/70 backdrop-blur p-4
+                   ${
+                     isLast
+                       ? "left-6 right-6"
+                       : "left-1/2 -translate-x-1/2 w-[339px]"
+                   }`}>
+                <h2 className="font-bold text-[25px] leading-snug">
+                  {a.title}
+                </h2>
                 <p className="text-[14px] mt-3">{a.excerpt}</p>
               </div>
             </article>
@@ -53,9 +55,6 @@ export const NewsSlider = () => {
     </Swiper>
   );
 };
-
-
-
 
 // import { useEffect, useState } from "react";
 // import { createClient } from "pexels";
@@ -89,8 +88,8 @@ export const NewsSlider = () => {
 //             />
 
 //             <div
-//               className={`blur- flex flex-col justify-evenly left-1/2 -translate-x-1/2 relative 
-//                ${index === photos.length - 1 ? "w-full" : "w-[339px]"} 
+//               className={`blur- flex flex-col justify-evenly left-1/2 -translate-x-1/2 relative
+//                ${index === photos.length - 1 ? "w-full" : "w-[339px]"}
 //                h-[117px] bottom-32 bg-gray-100 opacity-70 rounded-[12px]`}
 //             >
 //               <h2 className="font-bold ml-5 text-[25px]">This is my Title</h2>
