@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import NewsCardItem from "../components/NewsCardItem.jsx";
+import NewsCardItem from "../../components/news-card-item/NewsCardItem";
 
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -38,12 +38,11 @@ const News = () => {
   }, []);
   return (
     <section>
- 
-    <div className="w-[1512px] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
-      {news.map((news, i) => {
-        return <NewsCardItem key={news.id} newsItem={news} id={news.id} />;
-      })}
-    </div>
+      <div className="w-[1512px] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
+        {news.map((news, i) => {
+          return <NewsCardItem key={news.id} newsItem={news} id={news.id} />;
+        })}
+      </div>
     </section>
   );
 };

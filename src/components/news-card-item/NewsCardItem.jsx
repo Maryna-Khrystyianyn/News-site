@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { domainFromUrl, formatData } from "../assets/utils";
+import { domainFromUrl, formatData } from "../../assets/utils";
 
 const NewsCardItem = ({ newsItem, id }) => {
   const {

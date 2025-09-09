@@ -1,5 +1,5 @@
 import { EmailIcon, InstaIcon, XIcon } from "../../assets/Image";
-import { Title } from "../Title";
+import { Title } from "../title/Title";
 
 export const MainFooterSection = () => {
   return (
@@ -51,8 +51,7 @@ export const MainFooterSection = () => {
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
+                aria-label="Instagram">
                 <span className="mt-0.5">
                   <InstaIcon />
                 </span>
@@ -62,8 +61,7 @@ export const MainFooterSection = () => {
                 href="https://x.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="X (Twitter)"
-              >
+                aria-label="X (Twitter)">
                 <XIcon />
               </a>
               {/* <a

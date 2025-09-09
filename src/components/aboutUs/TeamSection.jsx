@@ -1,5 +1,5 @@
-import { Title } from "../Title";
-import { TeamCardItem } from "./../TeamCardItem";
+import { Title } from "../title/Title";
+import { TeamCardItem } from "./../team-card-item/TeamCardItem";
 
 export const TeamSection = () => {
   const TEAM = [
@@ -36,23 +36,14 @@ export const TeamSection = () => {
   ];
 
   return (
-    <div className="mt-120">
+    <div className="w-[1512px] mt-10 m-auto">
       <div>
         <Title title="Mega News Team" className="ml-5" />
       </div>
-      <div>
-        <section>
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {TEAM.map((m) => (
-              <TeamCardItem
-                key={m.name}
-                img={m.img}
-                name={m.name}
-                role={m.role}
-              />
-            ))}
-          </div>
-        </section>
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {TEAM.map((m) => (
+          <TeamCardItem key={m.name} img={m.img} name={m.name} role={m.role} />
+        ))}
       </div>
     </div>
   );

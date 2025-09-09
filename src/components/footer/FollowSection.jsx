@@ -1,5 +1,5 @@
 import { FollowSectionPhotos } from "./FollowSectionPhotos";
-import { Title } from "../Title";
+import { Title } from "../title/Title";
 
 export const FollowSection = () => {
   return (

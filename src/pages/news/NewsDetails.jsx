@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
-import { formatData } from "../assets/utils/formatData.js";
+import { formatData } from "../../assets/utils/formatData.js";
 
 const NewsDetails = () => {
   const { id } = useParams();
@@ -19,7 +19,7 @@ const NewsDetails = () => {
 
   const published = formatData(newsItem.publishedAt);
 
- return (
+  return (
     <div className="flex flex-col gap-5 max-w-[1072px] mx-auto">
       <div className="bg-gray-100 p-7 rounded-xl">
         <h1 className="mt-2 mb-5 font-bold text-2xl">{newsItem.title}</h1>
@@ -70,16 +70,12 @@ const NewsDetails = () => {
       <h2 className="font-bold">
         Not how long, but how well you have lived is the main thing.
       </h2>
-      <p>
-        {newsItem.description} Upon arrival, your senses will be rewarded…
-      </p>
+      <p>{newsItem.description} Upon arrival, your senses will be rewarded…</p>
     </div>
   );
 };
 
 export default NewsDetails;
-
-
 
 //   return (
 //     <div className="flex flex-col gap-5 w-[1072px] m-auto">
@@ -99,12 +95,12 @@ export default NewsDetails;
 //           <img className="m-2 w-[16px]" src="/img/CalenderIcon.svg" alt="" />{" "}
 //           {published}
 //         </div>
-        
+
 //          <div className="flex items-center">
 //           <img className="m-2 w-[16px]" src="/img/CommentsIcon.svg" alt="" />{" "}
 //           Comments: 35
 //         </div>
-        
+
 //         <a className="flex items-center" href="#">
 //           <img className="m-2 w-[16px]" src="/img/CommentsIcon.svg" alt="" />{" "}
 //           Comments: 35

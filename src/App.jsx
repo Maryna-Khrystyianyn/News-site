@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import MainLayout from "../src/layouts/MainLayut.jsx";
-import News from "./pages/News.jsx";
-import NewsDetails from "./pages/NewsDetails.jsx";
+import MainLayout from "./layout/MainLayout.jsx";
+import News from "./pages/news/News.jsx";
+import NewsDetails from "./pages/news/NewsDetails.jsx";
+import { AboutUs } from "./pages/about-us/AboutUs.jsx";
 
 export default function App() {
   return (
@@ -9,11 +10,11 @@ export default function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<News />} />
         <Route path="/:id" element={<NewsDetails />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
       </Route>
     </Routes>
   );
 }
-
 
 // import "./App.css";
 // import Header from "./components/header/Header.jsx";
@@ -26,7 +27,7 @@ export default function App() {
 // import { AboutUsPage } from "./components/aboutUs/AboutUsPage.jsx";
 // import { MapSection } from "./components/aboutUs/MapSection.jsx";
 // import { TeamSection } from "./components/aboutUs/TeamSection.jsx";
-// import { VideoSection } from "./components/aboutUs/VideoSection.jsx";   
+// import { VideoSection } from "./components/aboutUs/VideoSection.jsx";
 
 // function App() {
 //   return (

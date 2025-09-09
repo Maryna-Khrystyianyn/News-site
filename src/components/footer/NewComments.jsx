@@ -1,6 +1,6 @@
 // NewComments.jsx
 import { NewCommentsCard } from "./NewCommentsCard";
-import { Title } from "../Title";
+import { Title } from "../title/Title";
 
 export const NewComments = () => (
   <section className="ml-5">

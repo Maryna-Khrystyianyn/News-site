@@ -1,9 +1,11 @@
 export const VideoSection = () => {
   return (
     <>
-      <section className="bg-gray-100 w-[1512px] h-[604px] rounded-[12px] flex flex-col justify-center mb-10">
+      <div className="bg-gray-100 w-[1512px] h-[604px] rounded-[12px] flex flex-col justify-center mb-10 m-auto">
         <div>
-          <h1 className="text-[36px] font-medium ml-[32px] mb-8">We pay attention to your needs and do the best design.</h1>
+          <h1 className="text-[36px] font-medium ml-[32px] mb-8">
+            We pay attention to your needs and do the best design.
+          </h1>
         </div>
         <div className="flex justify-around">
           <p className="w-[641px] h-[406px] leading-[34px]  text-[#3E3232] text-[18px]">
@@ -22,21 +24,19 @@ export const VideoSection = () => {
             scelerisque fermentum. Odio ut enim blandit volutpat maecenas
             volutpat. Ornare lectus sit amet est placerat in egestas erat.
           </p>
-        {/* </div>
+          {/* </div>
         <div> */}
           <iframe
             width="744"
             height="444"
             src="https://www.youtube.com/embed/SqcY0GlETPk?si=DInMTcFpCqoT6KFA"
             title="YouTube video player"
-          
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-            className="rounded-[12px]"
-          ></iframe>
+            className="rounded-[12px]"></iframe>
         </div>
-      </section>
+      </div>
     </>
   );
 };

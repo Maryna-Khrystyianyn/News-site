@@ -1,11 +1,11 @@
 import { FollowerIcon, PostIcon, StarIcon } from "../../assets/Image";
 import Header from "../header/Header";
-import Navigator from "../header/Navigator";
+import Navigator from "../app-navigator/AppNavigator";
 // mt entfernen zeile 8 =========================================================
 const Writer = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-[1512px] h-[260px] bg-gray-100 rounded-[12px] mb-20 mt-1000"> 
+      <div className="flex flex-col items-center justify-center w-[1512px] h-[260px] bg-gray-100 rounded-[12px] mb-20 mt-1000">
         <img
           src="/img/TitleImage.svg"
           alt="Purple Gaaxy"
@@ -13,10 +13,7 @@ const Writer = () => {
         />
         <div className="flex justify-between items-center w-[1491px] mt-3">
           <div className="flex items-center gap-3">
-            <img
-              src="/img/author1.svg"
-              alt="Picture of the auhor"
-            />
+            <img src="/img/author1.svg" alt="Picture of the auhor" />
             <h3>Louis Hoebregts</h3>
           </div>
           <div className="flex items-center gap-15">
