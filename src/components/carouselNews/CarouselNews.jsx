@@ -11,9 +11,7 @@ import "./carouselNews.css"
 
 const CarouselNews = () => {
   const [news, setNews] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(true);
-  const [showAll, setShowAll] = useState(false);
+  
 
   const controller = new AbortController();
   const url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${API_KEY}`;
@@ -50,7 +48,7 @@ const CarouselNews = () => {
   return (
     <section className="my-10">
       <div className="w-[1511px] mx-auto flex">
-        <div className="w-[740px] h-[452px] flex gap-5">
+        <div className="w-[740px] h-[452px] grid grid-cols-2 gap-5">
           {erstTwo.map((news) => {
             return (
               <CarouselNewsItem
