@@ -15,7 +15,7 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
   console.log(isSmall);
   const widthItem = isSmall ? "360px" : "744px";
   const directionItem = isSmall ? "flex-col" : "flex-row";
-  const heightItem = isSmall ? "430px" : "230px";
+  const heightItem = isSmall ? "420px" : "230px";
 
   const sourceName = source?.name || domainFromUrl(url) || "Source";
   const published = formatData(publishedAt);
@@ -30,7 +30,7 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
 
   return (
     <div
-      className={`shadow-sm  rounded-[12px] p-[10px] gap-[10px]`}
+      className={`shadow-sm  rounded-[12px] p-[10px] gap-[10px] bg-white`}
       style={{ height: heightItem, width: widthItem }}
    >
       <article className={`flex ${directionItem} gap-3 `}>
@@ -41,7 +41,7 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
         />
         <div className="flex flex-col h-[200px] justify-between">
           <Link to={`/${id}`} state={{ newsItem }}>
-            <h2 className="font-bold mt-2 mb-2 ">{title}</h2>
+            <h2 className="font-bold mt-2 mb-2 ">{shortenText(title,10)}</h2>
             <p>{text}</p>
           </Link>
 
