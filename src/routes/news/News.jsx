@@ -7,6 +7,7 @@ const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 import { Authors } from "../../data/Author";
 import CategoryCarousel from "../../components/categoryCarousel/CategoryCarousel";
 import CarouselNews from "../../components/carouselNews/CarouselNews";
+import PopularPostCarousel from "../../components/popularPost/PopularPostCarousel";
 
 /* const NewsLinks = [{
   item:"News",
@@ -58,7 +59,7 @@ const News = () => {
       <CarouselNews />
 
       <Writer author={Authors[0]} />
-
+<PopularPostCarousel popularNews={news}/>
       <div className="max-w-[1511px] flex justify-end mx-auto my-2">
         <button
           className="bg-gray-100 rounded-md px-4 py-2 cursor-pointer text-gray-700 hover:font-bold w-[120px]"
