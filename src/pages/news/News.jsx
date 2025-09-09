@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import NewsCardItem from "../../components/news-card-item/NewsCardItem";
+import { NewsSlider } from "../../components/sliders/news-slider/NewsSlider";
+import { CategorySlider } from "../../components/sliders/category-slider/CategorySlider";
 
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -38,6 +40,9 @@ const News = () => {
   }, []);
   return (
     <section>
+      <CategorySlider />
+      <NewsSlider />
+
       <div className="w-[1512px] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
         {news.map((news, i) => {
           return <NewsCardItem key={news.id} newsItem={news} id={news.id} />;

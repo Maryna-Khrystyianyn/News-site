@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { formatData } from "../../assets/utils/formatData.js";
 
 const NewsDetails = () => {
-  const { id } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const newsItem = location.state?.newsItem;
