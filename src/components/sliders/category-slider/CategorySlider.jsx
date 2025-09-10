@@ -6,6 +6,7 @@ import { categories } from "../../../Data/categoryData";
 import { CategoryPill } from "./CategoryPill";
 import "./category-slider.css";
 
+// https://swiperjs.com/demos#responsive-breakpoints
 export const CategorySlider = () => {
   return (
     <Swiper
