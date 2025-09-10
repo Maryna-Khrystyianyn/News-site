@@ -19,9 +19,7 @@ const PopularPostCarousel = ({ popularNews }) => {
           slidesPerView={4}
           controller={true}
           navigation={true}
-          pagination={{
-            type: "progressbar",
-          }}
+         
           modules={[Pagination, Navigation]}
           className={"myPostSwiper"}
         >
