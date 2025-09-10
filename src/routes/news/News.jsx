@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import useWindowDimensions from "../../assets/hooks/windowDimensions";
+
 import NewsCardItem from "../../components/NewsCardItem";
 import Navbar from "../../components/navbar/Navbar";
 import NavList from "../../components/navList/NavList";
@@ -20,6 +22,7 @@ const News = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(true);
   const [showAll, setShowAll] = useState(false);
+  const { width, height } = useWindowDimensions();
 
   const controller = new AbortController();
   const url = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${API_KEY}`;
@@ -51,6 +54,7 @@ const News = () => {
     fetchNews();
   }, []);
   const visibleItems = showAll ? news : news.slice(0, 6);
+  const showSmall = width < 700 ? true : false;
 
   return (
     <section>
@@ -60,23 +64,27 @@ const News = () => {
       <CarouselNews />
 
       <Writer author={Authors[0]} />
-<PopularPostCarousel popularNews={news}/>
-      <div className="max-w-[1511px] flex justify-end mx-auto my-2">
+      <PopularPostCarousel popularNews={news} />
+      <div className="max-w-[1511px] lg:px-50 xl:px-10 px-10 2xl:px-0 flex justify-end mx-auto my-2">
         <button
-          className="bg-gray-100 rounded-md px-4 py-2 cursor-pointer text-gray-700 hover:font-bold w-[120px]"
+          className="bg-gray-100 rounded-md  py-2 cursor-pointer text-gray-700 hover:font-bold w-[120px]"
           onClick={() => setShowAll(true)}
         >
-          {" "}
           {`Show All >`}
         </button>
       </div>
-      <div className="w-[1511px] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
+      <div className="max-w-[1511px] px-10 2xl:px-0 mx-auto grid  xl:grid-cols-2 gap-5 sm:grid-cols-1">
         {visibleItems.map((news) => {
-          return <NewsCardItem key={news.id} newsItem={news} id={news.id} />;
+          return (
+            <div className="lg:px-40 xl:px-0">
+              {" "}
+              <NewsCardItem key={news.id} newsItem={news} id={news.id} isSmall={showSmall}/>
+            </div>
+          );
         })}
       </div>
 
-      <LatestVideo/>
+      <LatestVideo />
     </section>
   );
 };

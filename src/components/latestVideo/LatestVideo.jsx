@@ -17,13 +17,13 @@ const LatestVideo = () => {
   return (
     /* Haupt Contauner */
     <div className="w-full bg-gray-100 my-10 pb-10 pt-5">
-      <div className="w-[1512px] mx-auto relative ">
+      <div className="max-w-[1512px] px-10 2xl:px-0 mx-auto relative ">
         
         <div className="absolute top-1">
           <Title title={"Latest Videos "} />
         </div>
         {/* Vide + Carousel*/}
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 xl:grid-cols-2 xl gap-5">
           <div className="relative w-full overflow-hidden pt-12 h-[510px] flex items-end">
             <div className="w-full h-full ">
               <iframe
@@ -47,7 +47,7 @@ const LatestVideo = () => {
           {/*Carousel*/}
           <div className="shadow-[inset_-10px_0_10px_0_theme(colors.gray.100)]">
             <Swiper
-              slidesPerView={1.4}
+              slidesPerView={1.2}
               grid={{
                 rows: 2,
                 fill: "row",
@@ -55,7 +55,13 @@ const LatestVideo = () => {
               spaceBetween={0}
               controller={true}
               navigation={true}
-             
+              breakpoints={{
+                640: {slidesPerView: 1.2,},
+                768: {slidesPerView: 1.3,},
+                860: {slidesPerView: 1.5,},
+                1100: {slidesPerView: 2,},
+                1280: {slidesPerView: 1.2,},
+              }}
               modules={[Grid, Pagination,Navigation]}
               className="myVideoSwiper"
             >

@@ -13,9 +13,9 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
     // content
   } = newsItem || {};
   console.log(isSmall);
-  const widthItem = isSmall ? "w-full" : "744px";
+  const imgWidth = isSmall ? "w-[95%]" : "w-[330px]";
   const directionItem = isSmall ? "flex-col" : "flex-row";
-  const heightItem = isSmall ? "420px" : "230px";
+  const heightItem = isSmall ? "" : "260px";
 
   const sourceName = source?.name || domainFromUrl(url) || "Source";
   const published = formatData(publishedAt);
@@ -30,14 +30,14 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
 
   return (
     <div
-      className={`shadow-sm  rounded-[12px] p-[10px] gap-[10px] bg-white`}
-      style={{ height: heightItem, width: widthItem }}
+      className={`shadow-sm  w-full rounded-[12px] p-[10px] gap-[10px] bg-white`}
+      style={{ height: heightItem, }}
    >
-      <article className={`flex ${directionItem} gap-3 `}>
+      <article className={`flex ${directionItem}  items-center gap-3 `}>
         <img
           src={urlToImage}
           alt=""
-          className="w-[330px] h-[190px] rounded-2xl"
+          className={`${imgWidth} h-[90%] grow-1 rounded-2xl`}
         />
         <div className="flex flex-col h-[200px] justify-between">
           <Link to={`/${id}`} state={{ newsItem }}>
