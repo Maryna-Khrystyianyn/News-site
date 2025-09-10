@@ -8,7 +8,7 @@ import Title from "../title/Title";
 import "./popularPostCarousel.css";
 const PopularPostCarousel = ({ popularNews }) => {
   return (
-    <div className="w-[1511px] my-5 mx-auto bg-gray-50 p-2 rounded-2xl shadow-lg shadow-gray-100/50 relative">
+    <div className="max-w-[1511px] px-10 2xl:px-0 my-5 mx-auto bg-gray-50 p-2 rounded-2xl shadow-lg shadow-gray-100/50 relative">
       <div className="  rounded-xl">
         <div className="absolute top-3">
           <Title title={"Popular Post"} />
@@ -16,9 +16,17 @@ const PopularPostCarousel = ({ popularNews }) => {
 
         <Swiper
           spaceBetween={5}
-          slidesPerView={4}
+          slidesPerView={1}
           controller={true}
           navigation={true}
+          breakpoints={{
+            320: {slidesPerView: 1,},
+            460: {slidesPerView: 1.3,},
+            768: {slidesPerView: 2,},
+            1280: {slidesPerView: 3,},
+            1600: {slidesPerView: 4,},
+          }}
+
          
           modules={[Pagination, Navigation]}
           className={"myPostSwiper"}

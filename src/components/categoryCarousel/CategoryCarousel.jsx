@@ -11,39 +11,33 @@ import "./category.css";
 
 const CategoryCarousel = () => {
   return (
-    <div className="hidden md:block lg:px-0 px-10 max-w-[1511px] my-5 mx-auto bg-gray-100 rounded-xl p-3">
+    <div className="hidden md:block 2xl:px-0 px-10 max-w-[1511px] my-5 mx-auto bg-gray-100 rounded-xl p-3">
       <Swiper
         spaceBetween={5}
         slidesPerView={1}
         breakpoints={{
           320: {
-            // ab 320px Breite
             slidesPerView: 2,
           },
 
-          560: {
-            // ab 640px
+          460: {
             slidesPerView: 3,
           },
 
           768: {
-            // ab 640px
-            slidesPerView: 3,
+            slidesPerView: 4,
           },
-          
+
           1024: {
-            // ab 1024px
             slidesPerView: 5,
           },
           1280: {
-            // ab 1280px
             slidesPerView: 7,
           },
           1600: {
             slidesPerView: 8,
           },
         }}
-        /* controller={true} */
         navigation={true}
         modules={[Pagination, Navigation]}
         className={"categoriesList"}

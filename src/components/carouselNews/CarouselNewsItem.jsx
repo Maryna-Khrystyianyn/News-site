@@ -28,7 +28,7 @@ const CarouselNewsItem = ({newsItem, textLength}) => {
     <img className={`w-full h-full object-cover`} src={urlToImage} alt={title} />
     <div className="absolute   opacity-90 bottom-0 h-[117px]  w-[94%]  rounded-xl m-3 bg-gray-200/80 p-4">
       <p className="font-bold">{title}</p>
-      <p>{text}</p>
+      <p className="hidden sm:block">{text}</p>
     </div>
   </div>
 </div>

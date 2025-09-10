@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import useWindowDimensions from "../../assets/hooks/windowDimensions"
 
 import CarouselNewsItem from "./CarouselNewsItem";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -12,6 +13,7 @@ import "./carouselNews.css"
 const CarouselNews = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { width, height } = useWindowDimensions();
 
   const controller = new AbortController();
   const url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${API_KEY}`;
@@ -44,11 +46,13 @@ const CarouselNews = () => {
   }, []);
 
   const erstTwo = news.slice(0, 2);
-  const lastNews = news.slice(2, 6);
+  const lastNews = (width < 1024)? news.slice(0, 6):news.slice(2, 6);
+  const lenghtforTwo=(width < 1280)?6:10
+  
   return (
-    <section className="my-10 px-10 lg:px-0">
-      <div className="max-w-[1511px] mx-auto flex gap-5">
-        <div className="w-[50%] h-[452px] grid grid-cols-2 gap-5">
+    <section className="my-10 px-10 2xl:px-0">
+      <div className="max-w-[1511px] w-full mx-auto flex gap-5">
+        <div className="hidden  w-[50%] h-[452px] lg:grid grid-cols-2 gap-5">
           {erstTwo.map((news) => {
             return (
               
@@ -56,13 +60,13 @@ const CarouselNews = () => {
                 key={news.id}
                 newsItem={news}
                 
-                textLength={10}
+                textLength={lenghtforTwo}
               />
             );
           })}
         </div>
 
-        <div className=" w-[50%]  mx-auto ">
+        <div className=" lg:w-[50%] w-[100%] mx-auto ">
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             {lastNews.map((news) => {
               return (

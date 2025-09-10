@@ -5,7 +5,7 @@ import { DownArrow, FlagIcon } from "../../assets/AllImages";
 
 const Navbar = () => {
   return (
-    <div className="px-10 lg:px-0">
+    <div className="px-10 2xl:px-0">
 <div className="flex justify-between items-center max-w-[1511px] mx-auto my-5">
       <div className="hidden lg:flex items-center xl:gap-10 gap-5">
         <Link className="text-red-500 font-bold text-2xl" to="/">

@@ -13,7 +13,7 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
     // content
   } = newsItem || {};
   console.log(isSmall);
-  const widthItem = isSmall ? "360px" : "744px";
+  const widthItem = isSmall ? "w-full" : "744px";
   const directionItem = isSmall ? "flex-col" : "flex-row";
   const heightItem = isSmall ? "420px" : "230px";
 
