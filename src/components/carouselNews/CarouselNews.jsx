@@ -46,11 +46,12 @@ const CarouselNews = () => {
   const erstTwo = news.slice(0, 2);
   const lastNews = news.slice(2, 6);
   return (
-    <section className="my-10">
-      <div className="w-[1511px] mx-auto flex">
-        <div className="w-[740px] h-[452px] grid grid-cols-2 gap-5">
+    <section className="my-10 px-10 lg:px-0">
+      <div className="max-w-[1511px] mx-auto flex gap-5">
+        <div className="w-[50%] h-[452px] grid grid-cols-2 gap-5">
           {erstTwo.map((news) => {
             return (
+              
               <CarouselNewsItem
                 key={news.id}
                 newsItem={news}
@@ -61,7 +62,7 @@ const CarouselNews = () => {
           })}
         </div>
 
-        <div className=" w-[744px]  mx-auto ">
+        <div className=" w-[50%]  mx-auto ">
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             {lastNews.map((news) => {
               return (
