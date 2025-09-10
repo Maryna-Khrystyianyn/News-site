@@ -16,9 +16,7 @@ const CategoryCarousel = () => {
         slidesPerView={8}
         controller={true}
         navigation={true}
-        pagination={{
-          type: "progressbar",
-        }}
+        
         modules={[Pagination, Navigation]}
         className={"categoriesList"}
       >
