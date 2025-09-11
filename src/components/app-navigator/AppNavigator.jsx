@@ -7,7 +7,7 @@ const AppNavigator = () => {
   return (
     <nav
       aria-label="Breadcrumbs"
-      className="text-sm text-gray-600 my-4 mb-10 mt-10">
+      className="text-sm text-gray-600 my-4 mb-10 mt-10 sm:mt-15 -start md:w-[80%] md:ml-8 lg:ml-0 lg:mt-0" >
       <Link to="/" className="font-bold ">
         Home
       </Link>

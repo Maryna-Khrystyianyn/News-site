@@ -1,7 +1,7 @@
 export const VideoSection = () => {
   return (
     <>
-      <div className="bg-gray-100 w-[1512px] h-[604px] rounded-[12px] flex flex-col justify-center mb-10 m-auto">
+      <div className="bg-gray-100 w-[80%] h-[604px] rounded-[12px] flex flex-col justify-center mb-10 m-auto">
         <div>
           <h1 className="text-[36px] font-medium ml-[32px] mb-8">
             We pay attention to your needs and do the best design.

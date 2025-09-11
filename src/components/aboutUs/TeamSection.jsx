@@ -36,7 +36,7 @@ export const TeamSection = () => {
   ];
 
   return (
-    <div className="w-[1512px] mt-10 m-auto">
+    <div className="w-[80%] mt-10 m-auto">
       <div>
         <Title title="Mega News Team" className="ml-5" />
       </div>

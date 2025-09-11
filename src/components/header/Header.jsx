@@ -33,18 +33,18 @@ const Header = () => {
     },
   ];
   return (
-    <header className="flex h-12  justify-between items-center">
+    <header className="flex h-12  justify-between sm:flex-col md:flex-col lg:flex-row lg:items-center xl:w-[80%]">
       <div>
         <NavList linkArray={homeLink} />
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center sm:mt-4 lg:w-[40%] lg:mt-0 ">
         <div className="">
           <Search />
         </div>
         <div className="">
           <User />
         </div>
-        <div className="flex h-12 w-12 justify-around items-center bg-gray-200 rounded-[12px]"> 
+        <div className="flex h-12 w-12 justify-around items-center bg-gray-200 rounded-[12px] sm:ml-10 lg:ml-0 lg:w-20"> 
           <LeseZeichenIcon />
         </div>
       </div>

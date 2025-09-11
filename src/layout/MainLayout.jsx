@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 export default function MainLayout() {
   return (
     <div>
-      <div className="w-[1512px] m-auto pt-5 flex flex-col">
+      <div className="w-[80%] m-auto pt-5 flex flex-col md:items-center lg:items-start">
         <Header />
         <AppNavigator />
       </div>

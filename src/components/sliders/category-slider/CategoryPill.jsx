@@ -2,7 +2,7 @@ import { CategorySlider } from "./CategorySlider";
 
 export const CategoryPill = ({ label, imageUrl }) => {
   return (
-    <button>
+    <button className="pl-1">
       <img
         src={imageUrl}
         alt={label}

@@ -43,7 +43,7 @@ const News = () => {
       <CategorySlider />
       <NewsSlider />
 
-      <div className="w-[1512px] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
+      <div className="w-[80%] m-auto grid lg:grid-cols-2 gap-5 sm:grid-cols-1">
         {news.map((news, i) => {
           return <NewsCardItem key={news.id} newsItem={news} id={news.id} />;
         })}
