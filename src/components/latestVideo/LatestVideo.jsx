@@ -12,6 +12,7 @@ import "./videoCarousel.css"
 // import required modules
 import { Grid, Pagination,Navigation } from "swiper/modules";
 import VideoItem from "./VideoItem";
+import BigVideoItem from "./BigVideoItem";
 
 const LatestVideo = () => {
   return (
@@ -23,27 +24,8 @@ const LatestVideo = () => {
           <Title title={"Latest Videos "} />
         </div>
         {/* Vide + Carousel*/}
-        <div className="grid grid-cols-1 xl:grid-cols-2 xl gap-5">
-          <div className="relative w-full overflow-hidden pt-12 h-[510px] flex items-end">
-            <div className="w-full h-full ">
-              <iframe
-                width="100%"
-                height="100%"
-                src={videoList[0].videoUrl}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                className="rounded-xl"
-              ></iframe>
-            </div>
-
-            <div className="bg-white opacity-90 absolute bottom-[10px]  left-[10px] w-[calc(100%_-_20px)] rounded-xl p-3">
-              <h2 className="font-bold text-xl">{videoList[0].title}</h2>
-              <h2>{videoList[0].description}</h2>
-            </div>
-          </div>
+        <div className="hidden md:grid grid-cols-1 xl:grid-cols-2  gap-5">
+        <BigVideoItem  videoItem={videoList[0]}/>
           {/*Carousel*/}
           <div className="shadow-[inset_-10px_0_10px_0_theme(colors.gray.100)]">
             <Swiper
@@ -75,6 +57,20 @@ const LatestVideo = () => {
             </Swiper>
           </div>
         </div>
+{/* small screen */}
+<div className="md:hidden">
+<Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+            {videoList.map((videoItem) => {
+              return (
+                <SwiperSlide key={videoItem.id}>
+                  <BigVideoItem videoItem={videoItem}/>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+
+</div>
+
       </div>
     </div>
   );
