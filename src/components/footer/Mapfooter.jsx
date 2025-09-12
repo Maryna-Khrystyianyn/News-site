@@ -4,26 +4,30 @@ import Title from "../title/Title";
 
 const Mapfooter = () => {
   return (
-    <div className="bg-gray-100 rounded-r-xl max-w-[948px] flex flex-col p-[20px]  my-10 ">
+    <div className="bg-gray-100 rounded-r-xl xl:max-w-[948px] flex flex-col p-[20px]  my-10 ">
       <div className="flex gap-10 justify-end">
-        <div className="max-w-[400px]">
-          <Title title="Mega News" />
-          <p className="text-gray-600 my-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-            assumenda sed, reprehenderit quae distinctio deleniti inventore
-            praesentium quam sit hic mollitia ipsum unde ipsam minus.
-            Reprehenderit sequi rem, saepe enim soluta neque tempora, nemo
-            laboriosam dolorum nesciunt voluptates similique eos itaque minima
-            odio perspiciatis fugit, exercitationem optio aperiam nisi ea!
-          </p>
+        <div className="w-[70%px] flex flex-col justify-between pb-1">
+          <div>
+            <Title title="Mega News" />
+            <p className="text-gray-600 my-3">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+              assumenda sed, reprehenderit quae distinctio deleniti inventore
+              praesentium quam sit hic mollitia ipsum unde ipsam minus.
+              Reprehenderit sequi rem, saepe enim soluta neque tempora, nemo
+              laboriosam dolorum nesciunt voluptates similique eos itaque minima
+              odio perspiciatis fugit, exercitationem optio aperiam nisi ea!
+            </p>
+          </div>
 
-          <Title title={"Newsletters"} />
-          <div className="bg-white flex justify-between rounded-md p-3 items-center my-3">
-            <input type="text" placeholder="Write Your Email" />
-            <MailIcon />
+          <div>
+            <Title title={"Newsletters"} />
+            <div className="bg-white flex justify-between rounded-md p-3 items-center my-3">
+              <input type="text" placeholder="Write Your Email" />
+              <MailIcon />
+            </div>
           </div>
         </div>
-        <div className="max-w-[183px] flex flex-col ">
+        <div className="w-[183px] flex flex-col ">
           <Title title={"Categories"} />
           <div className="flex flex-col my-3 gap-3 text-sm text-gray-600 mb-5">
             <Link>Culture</Link>
