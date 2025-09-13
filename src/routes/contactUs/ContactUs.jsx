@@ -4,7 +4,7 @@ import NavList from "../../components/navList/NavList";
 const ContactUs = () => {
   const ContactLinks = [
     {
-      item: "News",
+      item: "Home",
       url: "/",
     },
     {

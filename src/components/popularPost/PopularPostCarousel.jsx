@@ -3,7 +3,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import NewsCardItem from "../NewsCardItem";
+import NewsCardItem from "../news/NewsCardItem";
 import Title from "../title/Title";
 import "./popularPostCarousel.css";
 const PopularPostCarousel = ({ popularNews }) => {
@@ -20,14 +20,12 @@ const PopularPostCarousel = ({ popularNews }) => {
           controller={true}
           navigation={true}
           breakpoints={{
-            320: {slidesPerView: 1,},
-            460: {slidesPerView: 1.3,},
-            768: {slidesPerView: 2,},
-            1280: {slidesPerView: 3,},
-            1600: {slidesPerView: 4,},
+            320: { slidesPerView: 1 },
+            460: { slidesPerView: 1.3 },
+            768: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 },
+            1600: { slidesPerView: 4 },
           }}
-
-         
           modules={[Pagination, Navigation]}
           className={"myPostSwiper"}
         >

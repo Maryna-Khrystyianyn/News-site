@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { domainFromUrl, formatData } from "../assets/utils";
+import { domainFromUrl, formatData } from "../../assets/utils";
 
 const NewsCardItem = ({ newsItem, isSmall, id }) => {
   const {
@@ -31,8 +31,8 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
   return (
     <div
       className={`shadow-sm  w-full rounded-[12px] p-[10px] gap-[10px] bg-white`}
-      style={{ height: heightItem, }}
-   >
+      style={{ height: heightItem }}
+    >
       <article className={`flex ${directionItem}  items-center gap-3 `}>
         <img
           src={urlToImage}
@@ -41,7 +41,7 @@ const NewsCardItem = ({ newsItem, isSmall, id }) => {
         />
         <div className="flex flex-col h-[200px] justify-between">
           <Link to={`/${id}`} state={{ newsItem }}>
-            <h2 className="font-bold mt-2 mb-2 ">{shortenText(title,10)}</h2>
+            <h2 className="font-bold mt-2 mb-2 ">{shortenText(title, 10)}</h2>
             <p>{text}</p>
           </Link>
 

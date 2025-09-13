@@ -5,7 +5,7 @@ import Title from "../title/Title";
 const Mapfooter = () => {
   return (
     <div className="bg-gray-100 rounded-r-xl xl:max-w-[948px] flex flex-col p-[20px]  my-10 ">
-      <div className="flex gap-10 justify-end">
+      <div className="flex  flex-col sm:flex-row gap-10 justify-end">
         <div className="w-[70%px] flex flex-col justify-between pb-1">
           <div>
             <Title title="Mega News" />
@@ -27,9 +27,9 @@ const Mapfooter = () => {
             </div>
           </div>
         </div>
-        <div className="w-[183px] flex flex-col ">
+        <div className=" w-full sm:w-[183px] flex flex-col items-center">
           <Title title={"Categories"} />
-          <div className="flex flex-col my-3 gap-3 text-sm text-gray-600 mb-5">
+          <div className="flex flex-col  my-3 gap-3 text-sm text-gray-600 mb-5">
             <Link>Culture</Link>
             <Link>Fashion</Link>
             <Link>Featured</Link>
@@ -52,7 +52,7 @@ const Mapfooter = () => {
           </div>
         </div>
       </div>
-      <div className="flex bg-gray-200 p-3 rounded-r-xl gap-50 justify-end text-sm text-gray-600 ml-[-20px]">
+      <div className="flex sm:flex-row flex-col items-center bg-gray-200 p-3 rounded-r-xl gap-5 sm:gap-50 justify-end text-sm text-gray-600 ml-[-20px]">
         <p>Privacy Policy | Terms & Conditions</p>
         <p>All Copyright (c) 2022 Reserved</p>
       </div>

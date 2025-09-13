@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="px-10 2xl:px-0">
 <div className="flex justify-between items-center max-w-[1511px] mx-auto my-5">
       <div className="hidden lg:flex items-center xl:gap-10 gap-5">
-        <Link className="text-red-500 font-bold text-2xl" to="/">
+        <Link className="text-red-500 font-bold text-2xl" to="/news">
           Mega.News
         </Link>
         <Link className="flex items-center" to="/categories">
